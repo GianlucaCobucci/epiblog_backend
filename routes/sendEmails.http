@@ -1,0 +1,9 @@
+
+POST http://localhost:5050/sendMail HTTP/1.1
+content-type: application/json
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmNvY29saWEzMzBAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiTWFyY28iLCJsYXN0TmFtZSI6IkNvbGlhIiwicm9sZSI6InVzZXIiLCJhZ2UiOjM5LCJpYXQiOjE2ODYzMDM3MTEsImV4cCI6MTY4NjM5MDExMX0.LelWluu2T7Hjod7Q4Bs_RvE1-yXLfMaqemtNqZLy78E
+
+{
+    "subject": "hello from nodemailer",
+    "message": "prima mail con nodemailer"
+}

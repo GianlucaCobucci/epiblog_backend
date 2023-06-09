@@ -1,0 +1,45 @@
+GET http://localhost:5050/users HTTP/1.1
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmNvY29saWEzMzBAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiTWFyY28iLCJsYXN0TmFtZSI6IkNvbGlhIiwicm9sZSI6InVzZXIiLCJhZ2UiOjM5LCJpYXQiOjE2ODYzMDM3MTEsImV4cCI6MTY4NjM5MDExMX0.LelWluu2T7Hjod7Q4Bs_RvE1-yXLfMaqemtNqZLy78E
+
+######
+
+POST http://localhost:5050/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "jwt",
+    "lastName": "lastnamejwt",
+    "email": "jwt@jwt.com", 
+    "password": "jwt12345",
+    "age": 40
+}
+
+######
+
+PATCH  http://localhost:5050/users/6476f50d90e8bbfffbeb0972 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Piero",
+    "lastName": "Rossi",
+    "email": "pierorossi330@gmail.com", 
+    "password": "piero12345",
+    "age": 30
+}
+
+
+#####
+
+DELETE  http://localhost:5050/users/6476f50d90e8bbfffbeb0972 HTTP/1.1
+
+#####
+
+POST http://localhost:5050/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "marcocolia330@gmail.com", 
+    "password": "prof12345"
+}
+
+######

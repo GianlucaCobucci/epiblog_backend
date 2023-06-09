@@ -1,0 +1,39 @@
+
+GET http://localhost:5050/posts HTTP/1.1
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmNvY29saWEzMzBAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiTWFyY28iLCJsYXN0TmFtZSI6IkNvbGlhIiwicm9sZSI6InVzZXIiLCJhZ2UiOjM5LCJpYXQiOjE2ODYzMDM3MTEsImV4cCI6MTY4NjM5MDExMX0.LelWluu2T7Hjod7Q4Bs_RvE1-yXLfMaqemtNqZLy78E
+
+######
+
+GET http://localhost:5050/posts/4 HTTP/1.1
+auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmNvY29saWEzMzBAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiTWFyY28iLCJsYXN0TmFtZSI6IkNvbGlhIiwicm9sZSI6InVzZXIiLCJhZ2UiOjM5LCJpYXQiOjE2ODYzMDM3MTEsImV4cCI6MTY4NjM5MDExMX0.LelWluu2T7Hjod7Q4Bs_RvE1-yXLfMaqemtNqZLy78E
+
+######
+
+POST http://localhost:5050/posts HTTP/1.1
+content-type: application/json
+
+{
+    "title": "post referenziato 565453",
+    "content": "Lorem ipsum post referenziato",
+    "author": "64773e635f5687b5e3d4e000", 
+    "rate": 3
+}
+
+######
+
+PATCH  http://localhost:5050/posts/64770707f58045f6db33675b HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Titolo modificato",
+    "content": "Lorem ipsum modificato",
+    "author": "Gianluca Cobucci modificato", 
+    "rate": 3
+}
+
+
+#####
+
+DELETE  http://localhost:5050/posts/64770707f58045f6db33675b HTTP/1.1
+
+#####
