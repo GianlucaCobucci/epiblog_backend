@@ -33,7 +33,8 @@ router.post('/login', async (req, res) => {
     firstName: user.firstName,
     lastName: user.lastName,
     role: user.role,
-    age: user.age
+    age: user.age,
+    id: user._id
     },process.env.SECRET_JWT_KEY, {expiresIn: '24h'})
 
   //visto che ho generato un token, non ha senso restituire questo sotto...

@@ -51,7 +51,10 @@ router.get('/posts', verifyToken, logger, async (req, res) => {
     const posts = await postModel.find()
       .populate("author", "firstName lastName email") //filtro
       .limit(parseInt(pageSize))
-      .skip(parseInt(skip));
+      .skip(parseInt(skip))
+      .sort({
+        createdAt: "desc"
+      })
     const totalPosts = await postModel.countDocuments();
 
     res.status(200).send({

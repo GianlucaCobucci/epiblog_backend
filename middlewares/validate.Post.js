@@ -17,7 +17,7 @@ export const validatePost = [
     .trim()
     .escape(),
   check('rate')
-    .isNumeric()
+    .isInt()
     .withMessage('Il voto deve essere un numero')
     .toInt(), // converte il voto in un numero intero
   (req, res, next) => {
