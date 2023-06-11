@@ -17,6 +17,7 @@ import usersRoute from './routes/users.js';
 import postsRoute from './routes/posts.js';
 import loginRoute from './routes/login.js';
 import sendEmailsRoute from './routes/sendEmails.js';
+import githubRoute from './routes/gitHubAuth.js'
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/', usersRoute);
 app.use('/', postsRoute);
 app.use('/', loginRoute);
 app.use('/', sendEmailsRoute)
+app.use('/', githubRoute)
 
 const db = mongoose.connection;
 
