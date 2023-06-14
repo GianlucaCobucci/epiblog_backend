@@ -10,6 +10,8 @@ dotenv.config();
 
 const router = express.Router()
 
+app.set('trust proxy', 1);
+
 router.use(cookieParser())
 
 router.use(session({
