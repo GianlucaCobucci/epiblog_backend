@@ -15,9 +15,7 @@ router.use(cookieParser())
 router.use(session({
     secret: process.env.GITHUB_CLIENT_SECRET,
     resave: false,
-    saveUninitialized: false,
-    store: mongoStore,
-
+    saveUninitialized: false
 })
 )
 
