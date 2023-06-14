@@ -1,7 +1,7 @@
 import express from 'express'
 import passport from 'passport'
 import { Strategy as GitHubStrategy } from 'passport-github2';
-import session from 'cookie-session'
+import session from 'express-session'
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import jwt from 'jsonwebtoken';
@@ -15,7 +15,9 @@ router.use(cookieParser())
 router.use(session({
     secret: process.env.GITHUB_CLIENT_SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: mongoStore,
+
 })
 )
 
