@@ -57,6 +57,7 @@ mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+//console.log(process.env.DB_URL)
 
 db.on('error', console.error.bind(console, 'Errore di connessione al server DB'));
 db.once('open', () => {
